@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_colores</title>
+    <style>
+        div{
+            width:200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="primero" style="background-color: blue;">AZUL</div>
+    <div id="segundo" style="background-color: red;">ROJO</div>
+    <div id="tercero" style="background-color: green;">VERDE</div>
+    <div id="cuarto" style="background-color: yellow;">AMARILLO</div>
+
+
+
+    <script>
+    
+    const uno = document.getElementById("primero")   
+    uno.addEventListener("click", function(){
+        uno.style.backgroundColor = 'black'
+    });
+
+    const dos = document.getElementById("segundo")
+    dos.addEventListener("click", function(){
+       dos.style.backgroundColor = 'black'
+    });
+
+    const tres = document.getElementById("tercero")
+    tres.addEventListener("click", function(){
+       tres.style.backgroundColor = 'black'
+    });
+
+    const cuatro = document.getElementById("cuarto")
+    cuatro.addEventListener("click", function(){
+       cuatro.style.backgroundColor = 'black'
+    });
+
+    </script>
+</body>
+</html>

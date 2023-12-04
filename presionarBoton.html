@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presionar Botones para cambiar el color</title>
+</head>
+<body id="container">
+    <div id="key" style="width: 200px; height: 200px; background-color: white; border:5px solid black;"></div>
+
+    <script>
+
+        function pintar(color2){
+            colorBloque.style.backgroundColor = color2;
+        };
+
+        function agregarDiv(color2) {
+            contenedor = document.getElementById("container");
+            nuevoDiv = document.createElement("div");
+            nuevoDiv.setAttribute("class","bloque");
+            nuevoDiv.textContent = "Nuevo Div";
+            nuevoDiv.style.backgroundColor = color2;
+            nuevoDiv.style.width = '200px';
+            nuevoDiv.style.height = '200px';
+            nuevoDiv.style.border = '5px solid black';
+            container.appendChild(nuevoDiv);     
+        };
+
+        const colorBloque = document.getElementById("key");
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "a" || event.key === "A") {
+                color = 'pink';
+                pintar(color);
+            } else if (event.key === "s" || event.key === "S") {
+                color = 'orange';
+                pintar(color);
+            } else if (event.key === "d" || event.key === "D") {
+                color = 'skyblue';
+                pintar(color);
+            } else if(event.key === "q" || event.key === "Q"){
+                color = 'purple';
+                agregarDiv(color);
+            } else if(event.key === "w" || event.key === "W"){
+                color = 'silver';
+                agregarDiv(color);
+            } else if(event.key === "e" || event.key === "E"){
+                color = 'brown';
+                agregarDiv(color);
+            
+            } else{
+                color = 'white';
+                pintar(color);
+            }
+
+            console.log(color)
+            
+        });
+
+        var color = '';
+       
+    </script>
+</body>
+</html>
